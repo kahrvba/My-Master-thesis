@@ -1,0 +1,226 @@
+ahmed@Ahmeds-Mac-mini My-Master-thesis %  source venv/bin/activate && python scr
+ipts/benchmark_algorithms.py
+Step 2: Full Timing Pipeline
+============================
+Sizes: 10K, 50K, 100K, 500K, 1M, 2M
+Distributions: uniform, normal, lognormal, exponential
+Structures: random, nearly_sorted, reverse_sorted, few_unique, sorted_runs, sorted
+Repeats: 5
+Total samples: 720
+Algorithms: introsort, heapsort, timsort, counting_sort
+
+✓ All 4 algorithms verified correct.
+
+── n=10K (120 samples, 7 timing repeats) ──
+             uniform/random: winner=      heapsort  t_intro=   0.07ms  t_heap=   0.06ms  t_tim=   0.21ms  t_count=  19.67ms
+      uniform/nearly_sorted: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.15ms  t_count=  19.67ms
+     uniform/reverse_sorted: winner=       timsort  t_intro=   0.06ms  t_heap=   0.05ms  t_tim=   0.01ms  t_count=  22.92ms
+         uniform/few_unique: winner=      heapsort  t_intro=   0.02ms  t_heap=   0.02ms  t_tim=   0.19ms  t_count=  16.84ms
+        uniform/sorted_runs: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.11ms  t_count=  19.66ms
+             uniform/sorted: winner=       timsort  t_intro=   0.06ms  t_heap=   0.05ms  t_tim=   0.01ms  t_count=  19.90ms
+              normal/random: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.21ms  t_count=  19.26ms
+       normal/nearly_sorted: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.15ms  t_count=  19.90ms
+      normal/reverse_sorted: winner=       timsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.02ms  t_count=  19.79ms
+          normal/few_unique: winner=      heapsort  t_intro=   0.02ms  t_heap=   0.02ms  t_tim=   0.19ms  t_count=  11.52ms
+         normal/sorted_runs: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.11ms  t_count=  19.67ms
+              normal/sorted: winner=       timsort  t_intro=   0.05ms  t_heap=   0.06ms  t_tim=   0.01ms  t_count=  19.30ms
+           lognormal/random: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.21ms  t_count=  19.38ms
+    lognormal/nearly_sorted: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.14ms  t_count=  19.67ms
+   lognormal/reverse_sorted: winner=       timsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.05ms  t_count=  23.30ms
+       lognormal/few_unique: winner=      heapsort  t_intro=   0.02ms  t_heap=   0.02ms  t_tim=   0.22ms  t_count=   5.09ms
+      lognormal/sorted_runs: winner=     introsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.11ms  t_count=  19.64ms
+           lognormal/sorted: winner=       timsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.01ms  t_count=  19.96ms
+         exponential/random: winner=      heapsort  t_intro=   0.07ms  t_heap=   0.06ms  t_tim=   0.21ms  t_count=  21.54ms
+  exponential/nearly_sorted: winner=      heapsort  t_intro=   0.07ms  t_heap=   0.07ms  t_tim=   0.16ms  t_count=  19.58ms
+  exponential/reverse_sorted: winner=       timsort  t_intro=   0.05ms  t_heap=   0.06ms  t_tim=   0.03ms  t_count=  20.01ms
+     exponential/few_unique: winner=      heapsort  t_intro=   0.02ms  t_heap=   0.02ms  t_tim=   0.21ms  t_count=   5.27ms
+    exponential/sorted_runs: winner=      heapsort  t_intro=   0.06ms  t_heap=   0.06ms  t_tim=   0.11ms  t_count=  20.46ms
+         exponential/sorted: winner=       timsort  t_intro=   0.05ms  t_heap=   0.06ms  t_tim=   0.01ms  t_count=  20.19ms
+
+── n=50K (120 samples, 7 timing repeats) ──
+             uniform/random: winner=      heapsort  t_intro=   0.34ms  t_heap=   0.33ms  t_tim=   1.38ms  t_count=  23.89ms
+      uniform/nearly_sorted: winner=     introsort  t_intro=   0.36ms  t_heap=   0.36ms  t_tim=   0.95ms  t_count=  22.41ms
+     uniform/reverse_sorted: winner=       timsort  t_intro=   0.33ms  t_heap=   0.32ms  t_tim=   0.18ms  t_count=  22.31ms
+         uniform/few_unique: winner=      heapsort  t_intro=   0.09ms  t_heap=   0.09ms  t_tim=   1.12ms  t_count=  18.20ms
+        uniform/sorted_runs: winner=      heapsort  t_intro=   0.35ms  t_heap=   0.34ms  t_tim=   0.78ms  t_count=  23.47ms
+             uniform/sorted: winner=       timsort  t_intro=   0.33ms  t_heap=   0.32ms  t_tim=   0.03ms  t_count=  23.18ms
+              normal/random: winner=     introsort  t_intro=   0.34ms  t_heap=   0.34ms  t_tim=   1.37ms  t_count=  23.59ms
+       normal/nearly_sorted: winner=      heapsort  t_intro=   0.36ms  t_heap=   0.36ms  t_tim=   0.94ms  t_count=  22.49ms
+      normal/reverse_sorted: winner=       timsort  t_intro=   0.34ms  t_heap=   0.32ms  t_tim=   0.24ms  t_count=  22.58ms
+          normal/few_unique: winner=     introsort  t_intro=   0.09ms  t_heap=   0.09ms  t_tim=   1.16ms  t_count=   9.42ms
+         normal/sorted_runs: winner=     introsort  t_intro=   0.34ms  t_heap=   0.34ms  t_tim=   0.77ms  t_count=  22.59ms
+              normal/sorted: winner=       timsort  t_intro=   0.33ms  t_heap=   0.33ms  t_tim=   0.03ms  t_count=  21.56ms
+           lognormal/random: winner=     introsort  t_intro=   0.34ms  t_heap=   0.34ms  t_tim=   1.37ms  t_count=  19.79ms
+    lognormal/nearly_sorted: winner=     introsort  t_intro=   0.35ms  t_heap=   0.35ms  t_tim=   0.94ms  t_count=  19.89ms
+   lognormal/reverse_sorted: winner=      heapsort  t_intro=   0.33ms  t_heap=   0.34ms  t_tim=   0.48ms  t_count=  20.04ms
+       lognormal/few_unique: winner=      heapsort  t_intro=   0.09ms  t_heap=   0.09ms  t_tim=   1.16ms  t_count=   5.23ms
+      lognormal/sorted_runs: winner=      heapsort  t_intro=   0.34ms  t_heap=   0.34ms  t_tim=   0.76ms  t_count=  19.91ms
+           lognormal/sorted: winner=       timsort  t_intro=   0.33ms  t_heap=   0.33ms  t_tim=   0.03ms  t_count=  19.87ms
+         exponential/random: winner=      heapsort  t_intro=   0.33ms  t_heap=   0.33ms  t_tim=   1.42ms  t_count=  21.01ms
+  exponential/nearly_sorted: winner=     introsort  t_intro=   0.36ms  t_heap=   0.35ms  t_tim=   0.95ms  t_count=  20.99ms
+  exponential/reverse_sorted: winner=     introsort  t_intro=   0.32ms  t_heap=   0.33ms  t_tim=   0.35ms  t_count=  20.86ms
+     exponential/few_unique: winner=      heapsort  t_intro=   0.09ms  t_heap=   0.09ms  t_tim=   1.21ms  t_count=   6.14ms
+    exponential/sorted_runs: winner=      heapsort  t_intro=   0.34ms  t_heap=   0.34ms  t_tim=   0.76ms  t_count=  21.31ms
+         exponential/sorted: winner=       timsort  t_intro=   0.32ms  t_heap=   0.32ms  t_tim=   0.03ms  t_count=  20.88ms
+  Time for n=50K: 22.3s  |  Total: 43.0s  |  ETA: 86s
+
+── n=100K (120 samples, 7 timing repeats) ──
+             uniform/random: winner=     introsort  t_intro=   0.71ms  t_heap=   0.70ms  t_tim=   3.01ms  t_count=  27.51ms
+      uniform/nearly_sorted: winner=     introsort  t_intro=   0.78ms  t_heap=   0.75ms  t_tim=   2.16ms  t_count=  27.63ms
+     uniform/reverse_sorted: winner=       timsort  t_intro=   0.70ms  t_heap=   0.70ms  t_tim=   0.54ms  t_count=  27.45ms
+         uniform/few_unique: winner=      heapsort  t_intro=   0.19ms  t_heap=   0.18ms  t_tim=   2.36ms  t_count=  17.31ms
+        uniform/sorted_runs: winner=     introsort  t_intro=   0.72ms  t_heap=   0.72ms  t_tim=   1.75ms  t_count=  27.86ms
+             uniform/sorted: winner=       timsort  t_intro=   0.71ms  t_heap=   0.70ms  t_tim=   0.05ms  t_count=  27.90ms
+              normal/random: winner=     introsort  t_intro=   0.73ms  t_heap=   0.73ms  t_tim=   3.16ms  t_count=  28.21ms
+       normal/nearly_sorted: winner=      heapsort  t_intro=   0.76ms  t_heap=   0.76ms  t_tim=   2.11ms  t_count=  26.37ms
+      normal/reverse_sorted: winner=       timsort  t_intro=   0.70ms  t_heap=   0.69ms  t_tim=   0.65ms  t_count=  26.57ms
+          normal/few_unique: winner=      heapsort  t_intro=   0.19ms  t_heap=   0.18ms  t_tim=   2.38ms  t_count=  12.54ms
+         normal/sorted_runs: winner=      heapsort  t_intro=   0.73ms  t_heap=   0.72ms  t_tim=   1.75ms  t_count=  26.55ms
+              normal/sorted: winner=       timsort  t_intro=   0.69ms  t_heap=   0.70ms  t_tim=   0.05ms  t_count=  26.42ms
+           lognormal/random: winner=      heapsort  t_intro=   0.71ms  t_heap=   0.71ms  t_tim=   3.00ms  t_count=  20.55ms
+    lognormal/nearly_sorted: winner=      heapsort  t_intro=   0.76ms  t_heap=   0.76ms  t_tim=   2.12ms  t_count=  20.40ms
+   lognormal/reverse_sorted: winner=     introsort  t_intro=   0.70ms  t_heap=   0.72ms  t_tim=   1.21ms  t_count=  20.21ms
+       lognormal/few_unique: winner=      heapsort  t_intro=   0.18ms  t_heap=   0.18ms  t_tim=   2.40ms  t_count=   1.78ms
+      lognormal/sorted_runs: winner=      heapsort  t_intro=   0.75ms  t_heap=   0.72ms  t_tim=   1.77ms  t_count=  21.31ms
+           lognormal/sorted: winner=       timsort  t_intro=   0.72ms  t_heap=   0.71ms  t_tim=   0.05ms  t_count=  25.93ms
+         exponential/random: winner=     introsort  t_intro=   0.72ms  t_heap=   0.72ms  t_tim=   3.05ms  t_count=  24.11ms
+  exponential/nearly_sorted: winner=      heapsort  t_intro=   0.76ms  t_heap=   0.77ms  t_tim=   2.13ms  t_count=  24.22ms
+  exponential/reverse_sorted: winner=     introsort  t_intro=   0.70ms  t_heap=   0.70ms  t_tim=   0.88ms  t_count=  24.11ms
+     exponential/few_unique: winner=     introsort  t_intro=   0.18ms  t_heap=   0.19ms  t_tim=   2.40ms  t_count=   5.60ms
+    exponential/sorted_runs: winner=      heapsort  t_intro=   0.73ms  t_heap=   0.73ms  t_tim=   1.74ms  t_count=  22.63ms
+         exponential/sorted: winner=       timsort  t_intro=   0.70ms  t_heap=   0.71ms  t_tim=   0.05ms  t_count=  23.91ms
+  Time for n=100K: 27.0s  |  Total: 70.0s  |  ETA: 70s
+
+── n=500K (120 samples, 7 timing repeats) ──
+             uniform/random: winner=      heapsort  t_intro=   4.14ms  t_heap=   4.10ms  t_tim=  17.79ms  t_count=  42.38ms
+      uniform/nearly_sorted: winner=     introsort  t_intro=   4.37ms  t_heap=   4.38ms  t_tim=  12.66ms  t_count=  41.78ms
+     uniform/reverse_sorted: winner=      heapsort  t_intro=   3.96ms  t_heap=   4.00ms  t_tim=   4.88ms  t_count=  41.42ms
+         uniform/few_unique: winner=      heapsort  t_intro=   0.95ms  t_heap=   0.94ms  t_tim=  12.85ms  t_count=  20.25ms
+        uniform/sorted_runs: winner=     introsort  t_intro=   4.16ms  t_heap=   4.17ms  t_tim=  11.11ms  t_count=  42.73ms
+             uniform/sorted: winner=       timsort  t_intro=   3.94ms  t_heap=   3.90ms  t_tim=   0.26ms  t_count=  41.50ms
+              normal/random: winner=      heapsort  t_intro=   4.09ms  t_heap=   4.07ms  t_tim=  17.58ms  t_count=  33.02ms
+       normal/nearly_sorted: winner=      heapsort  t_intro=   4.44ms  t_heap=   4.39ms  t_tim=  12.67ms  t_count=  33.13ms
+      normal/reverse_sorted: winner=      heapsort  t_intro=   4.01ms  t_heap=   3.99ms  t_tim=   5.66ms  t_count=  32.32ms
+          normal/few_unique: winner=     introsort  t_intro=   0.93ms  t_heap=   0.93ms  t_tim=  12.79ms  t_count=   8.53ms
+         normal/sorted_runs: winner=     introsort  t_intro=   4.12ms  t_heap=   4.20ms  t_tim=  11.14ms  t_count=  33.18ms
+              normal/sorted: winner=       timsort  t_intro=   3.93ms  t_heap=   4.02ms  t_tim=   0.26ms  t_count=  32.24ms
+           lognormal/random: winner=     introsort  t_intro=   4.10ms  t_heap=   4.10ms  t_tim=  17.55ms  t_count=  23.93ms
+    lognormal/nearly_sorted: winner=      heapsort  t_intro=   4.42ms  t_heap=   4.41ms  t_tim=  12.60ms  t_count=  23.11ms
+   lognormal/reverse_sorted: winner=      heapsort  t_intro=   4.25ms  t_heap=   4.28ms  t_tim=   8.61ms  t_count=  23.45ms
+       lognormal/few_unique: winner=      heapsort  t_intro=   0.93ms  t_heap=   0.93ms  t_tim=  12.75ms  t_count=   1.17ms
+      lognormal/sorted_runs: winner=      heapsort  t_intro=   4.16ms  t_heap=   4.15ms  t_tim=  11.11ms  t_count=  23.67ms
+           lognormal/sorted: winner=       timsort  t_intro=   4.23ms  t_heap=   4.30ms  t_tim=   0.26ms  t_count=  22.68ms
+         exponential/random: winner=      heapsort  t_intro=   4.13ms  t_heap=   4.08ms  t_tim=  17.51ms  t_count=  27.57ms
+  exponential/nearly_sorted: winner=      heapsort  t_intro=   4.43ms  t_heap=   4.41ms  t_tim=  12.72ms  t_count=  26.44ms
+  exponential/reverse_sorted: winner=     introsort  t_intro=   4.13ms  t_heap=   4.18ms  t_tim=   7.43ms  t_count=  27.00ms
+     exponential/few_unique: winner=      heapsort  t_intro=   0.99ms  t_heap=   0.94ms  t_tim=  12.90ms  t_count=   4.35ms
+    exponential/sorted_runs: winner=     introsort  t_intro=   4.14ms  t_heap=   4.17ms  t_tim=  11.07ms  t_count=  27.77ms
+         exponential/sorted: winner=       timsort  t_intro=   4.14ms  t_heap=   4.09ms  t_tim=   0.26ms  t_count=  26.18ms
+  Time for n=500K: 53.7s  |  Total: 123.6s  |  ETA: 62s
+
+── n=1M (120 samples, 5 timing repeats) ──
+             uniform/random: winner=      heapsort  t_intro=   9.38ms  t_heap=   9.20ms  t_tim=  37.36ms  t_count=  33.46ms
+      uniform/nearly_sorted: winner=      heapsort  t_intro=   9.31ms  t_heap=   9.43ms  t_tim=  27.03ms  t_count=  32.43ms
+     uniform/reverse_sorted: winner=     introsort  t_intro=   8.38ms  t_heap=   8.39ms  t_tim=  12.61ms  t_count=  31.78ms
+         uniform/few_unique: winner=      heapsort  t_intro=   1.86ms  t_heap=   1.86ms  t_tim=  26.06ms  t_count=  18.53ms
+        uniform/sorted_runs: winner=     introsort  t_intro=   8.77ms  t_heap=   8.71ms  t_tim=  24.20ms  t_count=  34.29ms
+             uniform/sorted: winner=       timsort  t_intro=   8.56ms  t_heap=   8.52ms  t_tim=   0.54ms  t_count=  33.30ms
+              normal/random: winner=      heapsort  t_intro=   9.51ms  t_heap=  20.58ms  t_tim=  48.69ms  t_count=  41.32ms
+       normal/nearly_sorted: winner=     introsort  t_intro=   9.69ms  t_heap=   9.83ms  t_tim=  39.21ms  t_count=  38.09ms
+      normal/reverse_sorted: winner=     introsort  t_intro=   8.68ms  t_heap=   8.56ms  t_tim=  13.62ms  t_count=  35.53ms
+          normal/few_unique: winner=     introsort  t_intro=   1.89ms  t_heap=   1.92ms  t_tim=  26.20ms  t_count=  13.59ms
+         normal/sorted_runs: winner=     introsort  t_intro=  10.73ms  t_heap=  10.92ms  t_tim=  25.17ms  t_count=  38.62ms
+              normal/sorted: winner=       timsort  t_intro=   8.75ms  t_heap=   8.59ms  t_tim=   0.55ms  t_count=  35.81ms
+           lognormal/random: winner=      heapsort  t_intro=   8.78ms  t_heap=   8.71ms  t_tim=  37.73ms  t_count=  27.99ms
+    lognormal/nearly_sorted: winner=      heapsort  t_intro=  10.13ms  t_heap=   9.97ms  t_tim=  28.89ms  t_count=  26.61ms
+   lognormal/reverse_sorted: winner=     introsort  t_intro=   9.33ms  t_heap=   9.35ms  t_tim=  19.67ms  t_count=  26.67ms
+       lognormal/few_unique: winner=      heapsort  t_intro=   2.14ms  t_heap=   2.16ms  t_tim=  26.60ms  t_count=   2.67ms
+      lognormal/sorted_runs: winner=     introsort  t_intro=   9.18ms  t_heap=   9.32ms  t_tim=  24.47ms  t_count=  26.61ms
+           lognormal/sorted: winner=       timsort  t_intro=   9.37ms  t_heap=   9.32ms  t_tim=   0.57ms  t_count=  25.97ms
+         exponential/random: winner=      heapsort  t_intro=   8.82ms  t_heap=   8.79ms  t_tim=  37.65ms  t_count=  32.98ms
+  exponential/nearly_sorted: winner=      heapsort  t_intro=   9.63ms  t_heap=   9.67ms  t_tim=  27.02ms  t_count=  31.26ms
+  exponential/reverse_sorted: winner=      heapsort  t_intro=   9.06ms  t_heap=   8.90ms  t_tim=  16.79ms  t_count=  30.59ms
+     exponential/few_unique: winner=      heapsort  t_intro=   1.90ms  t_heap=   1.88ms  t_tim=  26.17ms  t_count=   5.16ms
+    exponential/sorted_runs: winner=      heapsort  t_intro=   8.78ms  t_heap=   8.94ms  t_tim=  24.26ms  t_count=  36.13ms
+         exponential/sorted: winner=       timsort  t_intro=   9.04ms  t_heap=   8.90ms  t_tim=   0.55ms  t_count=  30.56ms
+  Time for n=1M: 68.5s  |  Total: 192.1s  |  ETA: 38s
+
+── n=2M (120 samples, 5 timing repeats) ──
+             uniform/random: winner=     introsort  t_intro=  18.46ms  t_heap=  18.57ms  t_tim=  78.03ms  t_count=  42.66ms
+      uniform/nearly_sorted: winner=      heapsort  t_intro=  20.05ms  t_heap=  19.57ms  t_tim=  56.85ms  t_count=  38.75ms
+     uniform/reverse_sorted: winner=      heapsort  t_intro=  18.34ms  t_heap=  18.10ms  t_tim=  30.15ms  t_count=  38.31ms
+         uniform/few_unique: winner=      heapsort  t_intro=   3.74ms  t_heap=   3.78ms  t_tim=  52.55ms  t_count=  23.21ms
+        uniform/sorted_runs: winner=      heapsort  t_intro=  18.91ms  t_heap=  19.06ms  t_tim=  52.26ms  t_count=  42.56ms
+             uniform/sorted: winner=       timsort  t_intro=  18.28ms  t_heap=  18.41ms  t_tim=   1.09ms  t_count=  38.12ms
+              normal/random: winner=      heapsort  t_intro=  24.05ms  t_heap=  19.16ms  t_tim=  78.32ms  t_count=  46.64ms
+       normal/nearly_sorted: winner=      heapsort  t_intro=  20.84ms  t_heap=  19.86ms  t_tim=  57.17ms  t_count=  44.70ms
+      normal/reverse_sorted: winner=      heapsort  t_intro=  18.54ms  t_heap=  18.54ms  t_tim=  32.64ms  t_count=  41.83ms
+          normal/few_unique: winner=      heapsort  t_intro=   3.95ms  t_heap=   3.89ms  t_tim=  52.86ms  t_count=  14.85ms
+         normal/sorted_runs: winner=      heapsort  t_intro=  18.89ms  t_heap=  18.70ms  t_tim=  52.39ms  t_count=  46.89ms
+              normal/sorted: winner=       timsort  t_intro=  18.44ms  t_heap=  18.22ms  t_tim=   1.10ms  t_count=  41.30ms
+           lognormal/random: winner=      heapsort  t_intro=  18.69ms  t_heap=  18.53ms  t_tim=  78.00ms  t_count=  30.90ms
+    lognormal/nearly_sorted: winner=     introsort  t_intro=  20.19ms  t_heap=  20.20ms  t_tim=  56.56ms  t_count=  30.01ms
+   lognormal/reverse_sorted: winner=     introsort  t_intro=  19.28ms  t_heap=  19.36ms  t_tim=  40.13ms  t_count=  30.02ms
+       lognormal/few_unique: winner=     introsort  t_intro=   3.75ms  t_heap=   3.79ms  t_tim=  52.72ms  t_count=   5.09ms
+      lognormal/sorted_runs: winner=     introsort  t_intro=  19.00ms  t_heap=  18.97ms  t_tim=  52.47ms  t_count=  29.10ms
+           lognormal/sorted: winner=       timsort  t_intro=  19.56ms  t_heap=  19.50ms  t_tim=   1.10ms  t_count=  29.56ms
+         exponential/random: winner=     introsort  t_intro=  18.41ms  t_heap=  18.43ms  t_tim=  78.06ms  t_count=  39.92ms
+  exponential/nearly_sorted: winner=     introsort  t_intro=  19.96ms  t_heap=  19.80ms  t_tim=  57.90ms  t_count=  38.36ms
+  exponential/reverse_sorted: winner=      heapsort  t_intro=  19.13ms  t_heap=  18.51ms  t_tim=  36.78ms  t_count=  35.72ms
+     exponential/few_unique: winner=      heapsort  t_intro=   3.90ms  t_heap=   3.90ms  t_tim=  52.45ms  t_count=   8.68ms
+    exponential/sorted_runs: winner=     introsort  t_intro=  18.61ms  t_heap=  18.51ms  t_tim=  54.86ms  t_count=  44.08ms
+         exponential/sorted: winner=       timsort  t_intro=  20.01ms  t_heap=  19.50ms  t_tim=   1.15ms  t_count=  38.37ms
+  Time for n=2M: 119.8s  |  Total: 311.9s  |  ETA: 0s
+
+======================================================================
+PIPELINE COMPLETE
+======================================================================
+  Total samples: 720
+  Total time: 312.1s (5.2 min)
+
+  Splits:
+       train:  216 samples
+         val:   72 samples
+      test_A:   72 samples
+      test_B:  360 samples
+
+  Win counts (overall):
+         introsort: 240 (33.3%)  ████████████████
+          heapsort: 320 (44.4%)  ██████████████████████
+           timsort: 160 (22.2%)  ███████████
+     counting_sort:   0 ( 0.0%)  
+
+  Win counts by split:
+    train:
+           introsort:  67 (31.0%)
+            heapsort:  95 (44.0%)
+             timsort:  54 (25.0%)
+       counting_sort:   0 ( 0.0%)
+    val:
+           introsort:  22 (30.6%)
+            heapsort:  32 (44.4%)
+             timsort:  18 (25.0%)
+       counting_sort:   0 ( 0.0%)
+    test_A:
+           introsort:  25 (34.7%)
+            heapsort:  29 (40.3%)
+             timsort:  18 (25.0%)
+       counting_sort:   0 ( 0.0%)
+    test_B:
+           introsort: 126 (35.0%)
+            heapsort: 164 (45.6%)
+             timsort:  70 (19.4%)
+       counting_sort:   0 ( 0.0%)
+
+  VBS-SBS gap: 18.8% (heapsort wastes 18.8% of total time)
+
+  Output: /Users/ahmed/Desktop/thesis/My-Master-thesis/data/benchmark/
+               all_samples.parquet  0.12 MB
+             benchmark_config.json  0.00 MB
+                    test_A.parquet  0.03 MB
+                    test_B.parquet  0.07 MB
+                     train.parquet  0.05 MB
+                       val.parquet  0.03 MB
+
+✓ Ready for Step 3 (XGBoost training)
+(venv) ahmed@Ahmeds-Mac-mini My-Master-thesis % 

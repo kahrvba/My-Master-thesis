@@ -1,7 +1,0 @@
-Test Index,Dataset File,Folder,Predicted Algorithm,Actual Best,Execution Time,Best Execution Time,Correct
-0,/Users/ahmed/Desktop/project/Data_set_0-63/data_set_40000.txt,Data_set_0-63,Bubble Sort,Quick Sort,39.62079095840454,0.01095128059387207,False
-1,/Users/ahmed/Desktop/project/Data_set_0-1000/data_set_130000.txt,Data_set_0-1000,Merge Sort,Quick Sort,0.2060239315032959,0.06287384033203125,False
-2,/Users/ahmed/Desktop/project/Data_set_0-1000/data_set_30000.txt,Data_set_0-1000,Quick Sort,Quick Sort,0.01438283920288086,0.01438283920288086,True
-3,/Users/ahmed/Desktop/project/Data_set_0-1000/data_set_150000.txt,Data_set_0-1000,Quick Sort,Quick Sort,0.07955598831176758,0.07955598831176758,True
-4,/Users/ahmed/Desktop/project/Data_set_0-1000/data_set_10000.txt,Data_set_0-1000,Merge Sort,Quick Sort,0.015305042266845703,0.005593061447143555,False
-5,/Users/ahmed/Desktop/project/Data_set_0-1000/data_set_90000.txt,Data_set_0-1000,Merge Sort,Quick Sort,0.13681674003601074,0.03973078727722168,False

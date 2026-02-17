@@ -1,0 +1,10 @@
+# Core (data generation + feature extraction)
+numpy>=1.26
+pandas>=2.1
+pyarrow>=15.0
+
+# Model training + analysis
+tensorflow>=2.16
+tqdm>=4.66
+matplotlib>=3.8
+seaborn>=0.13

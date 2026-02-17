@@ -1,6 +1,16 @@
-** Datasets
-/Data_set_0-63
-/Data_set_0-1000
+# Datasets (raw and generated)
+/data/
 
-** venv
-/tf-venv
+# Generated artifacts
+/artifacts/
+*.weights.h5
+*.csv
+*.png
+
+# Python cache/env
+/tf-venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
