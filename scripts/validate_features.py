@@ -26,13 +26,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# ── Import extract_features from benchmark_algorithms ─────────────────────
+# ── Import feature extraction (single source of truth) ────────────────────
 # Add scripts/ to path so we can import
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from benchmark_algorithms import (
+from feature_extraction import (
     extract_features,
-    _FEATURE_NAMES,
+    FEATURE_NAMES as _FEATURE_NAMES,
     _monotonic_run_stats,
     _inversion_count_merge,
     EPS,

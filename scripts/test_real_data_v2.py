@@ -23,9 +23,9 @@ import numpy as np
 import pandas as pd
 import fastf1
 
-# ── Import our feature extraction ─────────────────────────────────────────
+# ── Import our feature extraction (single source of truth) ───────────────
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from benchmark_algorithms import extract_features, _FEATURE_NAMES
+from feature_extraction import extract_features, FEATURE_NAMES as _FEATURE_NAMES
 
 # ── Config ────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
