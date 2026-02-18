@@ -178,6 +178,10 @@ scripts/
   pilot_timing_v2.py              — Step 1b: pilot timing v2 (DONE)
   vbs_sbs_gap.py                  — Step 1b: VBS vs SBS gap analysis (DONE)
   benchmark_algorithms.py         — Step 2: full timing pipeline (DONE)
+  test_real_data.py               — v1: F1 fastest-lap test (35 arrays)
+  test_real_data_v2.py            — v2: F1 full-race test (108 arrays)
+  test_real_data_v3.py            — v3: Financial + seismic test (149 arrays)
+  test_real_data_v4.py            — v4: Cross-domain combined benchmark (1,039 arrays)
 
 data/
   synthetic/raw/                  — .npy arrays (Step 1, small scale)
@@ -190,6 +194,22 @@ data/
     test_A.parquet                — 72 samples (uniform + normal, 20%)
     test_B.parquet                — 360 samples (lognormal + exponential, bandit eval)
     benchmark_config.json         — full pipeline config
+  real_world/                     — v1 F1 results
+  real_world_v2/                  — v2 F1 results
+  real_world_v3/                  — v3 finance+seismic results
+  real_world_v4/                  — v4 combined cross-domain results
+    real_world_v4_combined.parquet — 1,039 rows (ALL data unified)
+    real_world_v4_new_data.parquet — 62 new arrays (weather, NASA, earthquake ext, large-scale)
+
+docs/
+  feature-definitions.md          — Complete 16-feature reference
+  feature-validation-report.md    — 214/214 feature tests passed
+  feature-extraction-defense.md   — Feature extraction integrity audit
+  real-world-f1-report.md         — v1 report
+  real-world-f1-report-v2.md      — v2 report
+  real-world-v3-report.md         — v3 report
+  real-world-v4-report.md         — v4 cross-domain combined report
+  vbs-sbs-gap-analysis.md         — VBS-SBS gap explanation + cross-domain strategy
 
 artifacts/
   feature_config.json             — feature extraction config
@@ -226,6 +246,30 @@ Runtime: 312s (5.2 min)
 ### Dataset
 - data/benchmark/all_samples.parquet — 720 rows, each with 16 features + 4 timing columns + metadata
 - Splits by distribution: train (216, uniform+normal) / val (72) / test_A (72) / test_B (360, lognormal+exponential)
+
+## Real-World Validation (v1–v4)
+
+### v1: F1 Fastest Lap (35 arrays, n~700)
+- timsort wins 77.1%, VBS-SBS gap 5.1%
+- Small arrays — timsort dominance expected
+
+### v2: F1 Full Race (108 arrays, 34K–1.13M)
+- heapsort 42.6%, introsort 37.0%, timsort 20.4%, VBS-SBS gap 3.2%
+- Genuine 3-way competition at scale
+
+### v3: Financial + Seismic (149 arrays, 2K–309K)
+- heapsort 64.4%, VBS-SBS gap 1.6%
+- Low gap explained: homogeneous domains → one algo dominates within each
+
+### v4: Cross-Domain Combined (1,039 arrays, 2K–2M)
+- **Combines ALL previous data + new real-world data**
+- New data: 5 cities weather (Open-Meteo), 23K NASA asteroids (JPL), 100K earthquakes (USGS), 10 large-scale generated arrays at 2M
+- Headline: 17.5% combined gap, 12.0% "real-only" gap
+- **HONEST READING: The 17.5% is dominated by 720 synthetic arrays (69% of data). The 12% includes 10 generated arrays. Every truly-real domain has gap under 3.1%.**
+- Per-domain gaps: weather 0.4%, earthquake 0.4–0.8%, NASA 1.1%, stock 1.8%, crypto 2.5%, F1 3.1%
+- Per-array margins remain large: 97.3% have >10%, 70.3% have >100%
+- **Thesis framing: Contribution is per-array prediction accuracy + structural sensitivity, not aggregate gap inflation**
+- Feature extraction validated: 0 NaN, 0 Inf on 62 new arrays
 
 ## Rules
 
